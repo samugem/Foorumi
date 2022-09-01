@@ -1,0 +1,29 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+
+model Viesti {
+    id Int @id @default(autoincrement())
+    keskustelu Keskustelu @relation(fields: [keskusteluId], references: [id])
+    keskusteluId Int 
+    nickname String @db.Text @default("anonyymi")
+    content String @db.Text
+    timestamp DateTime @default(now())
+}
+
+model Keskustelu {
+    id Int @id @default(autoincrement())
+    header String @db.Text
+    authorNickname String @db.Text @default("anonyymi")
+    content String @db.Text
+    viestit Viesti[]
+    timestamp DateTime @default(now())
+    updatedAt DateTime @updatedAt
+
+}
