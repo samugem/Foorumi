@@ -1,7 +1,7 @@
 {
-  "name": "so2-ot",
+  "name": "Keskustelupalsta",
   "version": "1.0.0",
-  "description": "Tämä on repository Sovellusohjelmointi 2 -opintojakson oppimistehtävien palautukseen.",
+  "description": "",
   "main": "index.ts",
   "scripts": {
     "start": "npx nodemon index.ts"
