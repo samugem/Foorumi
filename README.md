@@ -1,4 +1,4 @@
-# Keskustelupalsta
+# Foorumi
 
 NodeJS backend ja React frontend
 
